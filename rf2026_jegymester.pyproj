@@ -1,4 +1,4 @@
-<Project DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003" ToolsVersion="4.0">
+﻿<Project DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003" ToolsVersion="4.0">
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
@@ -18,7 +18,7 @@
     <Name>rf2026_jegymester</Name>
     <RootNamespace>gydsm_jegymester</RootNamespace>
     <IsWindowsApplication>False</IsWindowsApplication>
-    <InterpreterId>MSBuild|env|$(MSBuildProjectFullPath)</InterpreterId>
+    <InterpreterId>MSBuild|env2|$(MSBuildProjectFullPath)</InterpreterId>
     <WebBrowserPort>8888</WebBrowserPort>
     <SuppressPackageInstallationPrompt>True</SuppressPackageInstallationPrompt>
   </PropertyGroup>
@@ -37,11 +37,74 @@
   <ItemGroup>
     <Folder Include="jegymester\" />
     <Folder Include="jegymester\app\" />
+    <Folder Include="jegymester\app\blueprints\movie\" />
+    <Folder Include="jegymester\app\blueprints\userrole\" />
+    <Folder Include="jegymester\app\blueprints\user\" />
+    <Folder Include="jegymester\app\blueprints\ticketorder\" />
+    <Folder Include="jegymester\app\blueprints\ticketcategory\" />
+    <Folder Include="jegymester\app\blueprints\ticket\" />
+    <Folder Include="jegymester\app\blueprints\theater\" />
+    <Folder Include="jegymester\app\blueprints\seat\" />
+    <Folder Include="jegymester\app\blueprints\screening\" />
+    <Folder Include="jegymester\app\blueprints\role\" />
+    <Folder Include="jegymester\app\blueprints\order\" />
     <Folder Include="jegymester\app\main\" />
     <Folder Include="jegymester\app\models\" />
+    <Folder Include="jegymester\app\blueprints\" />
     <Folder Include="jegymester\app\templates\" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="jegymester\app\blueprints\movie\__init__.py" />
+    <Compile Include="jegymester\app\blueprints\order\__init__.py" />
+    <Compile Include="jegymester\app\blueprints\role\__init__.py" />
+    <Compile Include="jegymester\app\blueprints\screening\__init__.py" />
+    <Compile Include="jegymester\app\blueprints\seat\__init__.py" />
+    <Compile Include="jegymester\app\blueprints\theater\__init__.py" />
+    <Compile Include="jegymester\app\blueprints\ticketcategory\__init__.py" />
+    <Compile Include="jegymester\app\blueprints\ticketorder\__init__.py" />
+    <Compile Include="jegymester\app\blueprints\ticket\__init__.py" />
+    <Compile Include="jegymester\app\blueprints\userrole\__init__.py" />
+    <Compile Include="jegymester\app\blueprints\user\__init__.py" />
+    <Compile Include="jegymester\app\blueprints\movie\routes.py">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="jegymester\app\blueprints\movie\schemas.py">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="jegymester\app\blueprints\movie\service.py">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="jegymester\app\blueprints\order\routes.py" />
+    <Compile Include="jegymester\app\blueprints\order\schemas.py" />
+    <Compile Include="jegymester\app\blueprints\order\service.py" />
+    <Compile Include="jegymester\app\blueprints\role\routes.py" />
+    <Compile Include="jegymester\app\blueprints\role\schemas.py" />
+    <Compile Include="jegymester\app\blueprints\role\service.py" />
+    <Compile Include="jegymester\app\blueprints\screening\routes.py" />
+    <Compile Include="jegymester\app\blueprints\screening\schemas.py" />
+    <Compile Include="jegymester\app\blueprints\screening\service.py" />
+    <Compile Include="jegymester\app\blueprints\seat\routes.py" />
+    <Compile Include="jegymester\app\blueprints\seat\schemas.py" />
+    <Compile Include="jegymester\app\blueprints\seat\service.py" />
+    <Compile Include="jegymester\app\blueprints\theater\routes.py" />
+    <Compile Include="jegymester\app\blueprints\theater\schemas.py" />
+    <Compile Include="jegymester\app\blueprints\theater\service.py" />
+    <Compile Include="jegymester\app\blueprints\ticketcategory\routes.py" />
+    <Compile Include="jegymester\app\blueprints\ticketcategory\schemas.py" />
+    <Compile Include="jegymester\app\blueprints\ticketcategory\service.py" />
+    <Compile Include="jegymester\app\blueprints\ticketorder\routes.py" />
+    <Compile Include="jegymester\app\blueprints\ticketorder\schemas.py" />
+    <Compile Include="jegymester\app\blueprints\ticketorder\service.py" />
+    <Compile Include="jegymester\app\blueprints\ticket\routes.py" />
+    <Compile Include="jegymester\app\blueprints\ticket\schemas.py" />
+    <Compile Include="jegymester\app\blueprints\ticket\service.py" />
+    <Compile Include="jegymester\app\blueprints\userrole\routes.py" />
+    <Compile Include="jegymester\app\blueprints\userrole\schemas.py" />
+    <Compile Include="jegymester\app\blueprints\userrole\service.py" />
+    <Compile Include="jegymester\app\blueprints\user\routes.py" />
+    <Compile Include="jegymester\app\blueprints\user\schemas.py" />
+    <Compile Include="jegymester\app\blueprints\user\service.py" />
+    <Compile Include="jegymester\app\blueprints\__init__.py" />
     <Compile Include="jegymester\app\extensions.py" />
     <Compile Include="jegymester\app\main\routes.py" />
     <Compile Include="jegymester\app\main\__init__.py" />
@@ -63,19 +126,10 @@
     <Compile Include="jegymester\__init__db.py" />
   </ItemGroup>
   <ItemGroup>
-    <Interpreter Include="env1\">
-      <Id>env1</Id>
-      <Version>3.14</Version>
-      <Description>env1 (Python 3.14 (64-bit))</Description>
-      <InterpreterPath>Scripts\python.exe</InterpreterPath>
-      <WindowsInterpreterPath>Scripts\pythonw.exe</WindowsInterpreterPath>
-      <PathEnvironmentVariable>PYTHONPATH</PathEnvironmentVariable>
-      <Architecture>X64</Architecture>
-    </Interpreter>
-    <Interpreter Include="env\">
-      <Id>env</Id>
+    <Interpreter Include="env2\">
+      <Id>env2</Id>
       <Version>3.13</Version>
-      <Description>env (Python 3.13 (64-bit))</Description>
+      <Description>env2 (Python 3.13 (64-bit))</Description>
       <InterpreterPath>Scripts\python.exe</InterpreterPath>
       <WindowsInterpreterPath>Scripts\pythonw.exe</WindowsInterpreterPath>
       <PathEnvironmentVariable>PYTHONPATH</PathEnvironmentVariable>
